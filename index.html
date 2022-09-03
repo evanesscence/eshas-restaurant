@@ -1,54 +1,116 @@
 <!DOCTYPE html>
-
 <head>
-
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet">
 <style>
+
+
 body {
   font-family: helvetica, sans-serif;
   margin: 0 auto;
   max-width: 600px;
-  background-color: rgb(14, 15, 18);
-}
-
-h1 {
-    color: rgb(215, 196, 28);
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.9), rgba(0,0,0,1));
+  background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.9), rgba(0,0,0,1));
+  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,.9), rgba(0,0,0,1));
 }
 
 div {
+  height: 350px;
+  background-size: cover;
   position: relative;
   margin: 40px 0 0 0;
   border-radius: 12px;
-  height: 300px;
-  
 }
 
-.first {
-   background: url("https://images.unsplash.com/photo-1514516345957-556ca7d90a29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-   background-size: cover;
-   background-position: center;
+h1 {
+  font-family: 'Handlee', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
 }
-
-.second {
-   background: url("https://images.unsplash.com/photo-1546964124-0cce460f38ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-   background-size: cover;
-   background-position: center;
+h2 {
+  font-family: 'Caveat', cursive;
+  text-align: right;
+  color: #bbbbbb;
+  margin: 0 45px 70px 0;
 }
-
-.dessert {
-   background: url("https://images.unsplash.com/photo-1541599188778-cdc73298e8fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=740&q=80");
-   background-size: cover;
-   background-position: center;
-}
-
 p {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 22px;
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
   position: absolute;
   bottom: 0;
   margin: 0;
-  text-align: justify;
-  line-height: 28px;
-  padding: 10px;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(0, 0, 0, 0.7);
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("https://images.unsplash.com/photo-1514516345957-556ca7d90a29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-position: left;
+}
+.second{
+  background-image: url("https://images.unsplash.com/photo-1546964124-0cce460f38ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+.dessert{
+  background-image: url("https://images.unsplash.com/photo-1541599188778-cdc73298e8fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=740&q=80");
+  background-position: left;
+}
+.price {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    text-align: right;
+    font-size: 16px;
+    margin: 10px 45px 30px 0;
+  }
+  
+  div {
+    height: 170px;
+    margin: 20px 25px 0 25px;
+  }
+  
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  
+  small {
+    font-size: 16px;
+  }
 }
 
 </style>
@@ -57,19 +119,26 @@ p {
 
 <body>
 <h1>esha's restaurant</h1>
-
+<h2>a New York City eatery</h2>
 <div class="first">
-  <p>welsh onion soko $14<br /> 
-  <small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.</small></p>
+  <p>Welsh onion soko <span class="price">$14</span><br />
+  <small>Mustard sierra leone bologi kale chard beet greens black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil. </small></p>
 </div>
 
 <div class="second">
-  <p>pastrami boudin tongue $22<br /> 
+  <p>Pastrami boudin tongue <span class="price">$22</span><br />
   <small>Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.</small></p>
 </div>
-
+  
 <div class="dessert">
-  <p>fruitcake marzipan pudding dragee $8<br />
+  <p>Fruitcake marzipan <span class="price">$8</span><br />
   <small>Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.</small></p>
 </div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
 </body>
